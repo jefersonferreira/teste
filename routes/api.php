@@ -32,7 +32,7 @@ Route::group(['middleware' => 'auth:api'], function () {
     Route::delete('collaborators/{collaborator}', 'CollaboratorController@delete');
 
     Route::get('sectors', 'SectorController@index');
-    Route::get('sectors/{collaborator}', 'SectorController@show');
+    Route::get('sectors/{sector}', 'SectorController@show');
     Route::post('sectors', 'SectorController@store');
     Route::put('sectors/{sector}', 'SectorController@update');
     Route::delete('sectors/{sector}', 'SectorController@delete');
