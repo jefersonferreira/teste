@@ -24,7 +24,7 @@ Route::get('users', 'UserController@index');
 Route::post('login', 'Auth\LoginController@login');
 Route::post('logout', 'Auth\LoginController@logout');
 
-Route::group(['middleware' => 'auth:api'], function () {
+//Route::group(['middleware' => 'auth:api'], function () {
     Route::get('collaborators', 'CollaboratorController@index');
     Route::get('collaborators/{collaborator}', 'CollaboratorController@show');
     Route::post('collaborators', 'CollaboratorController@store');
@@ -36,4 +36,4 @@ Route::group(['middleware' => 'auth:api'], function () {
     Route::post('sectors', 'SectorController@store');
     Route::put('sectors/{sector}', 'SectorController@update');
     Route::delete('sectors/{sector}', 'SectorController@delete');
-});
+//});
