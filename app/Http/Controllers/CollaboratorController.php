@@ -9,7 +9,7 @@ class CollaboratorController extends Controller
 {
     public function index()
     {
-        return Collaborator::all()->where('status', true)->take(100);
+        return Collaborator::all()->take(100);
     }
 
     public function show(Collaborator $collaborator)
